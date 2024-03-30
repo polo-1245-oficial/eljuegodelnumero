@@ -21,11 +21,12 @@ public class Main {
 
         System.out.println("¿Hastá qué numero quieres que genere el juego?");
         numero = scanner.nextInt();
+        int numeroinfo = numero;
         int numeroaleatorio = ThreadLocalRandom.current().nextInt(1, numero); //generar el número aleatorio y definirlo
 
         while (numero != numeroaleatorio && intentos < intentosMax) { //Bucle para comprobar el número aleatorio y dar 3 intentos
             intentos = intentos+1;
-            System.out.println("Introduce un número del 1 al "+ numero +":");
+            System.out.println("Introduce un número del 1 al "+ numeroinfo +":");
             numero = scanner.nextInt();
         }
 
